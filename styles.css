@@ -1074,21 +1074,28 @@ header {
 /*Nav & Footer*/
 @media screen and (max-width: 768px) {
     .nav {
+        display: flex;
         flex-direction: column;
-        /* Stacks logo and links */
-        padding: 20px;
+        align-items: center;
+        padding: 20px 15px; 
         gap: 10px;
+        width: 100%; 
+        box-sizing: border-box; 
+        overflow: hidden;
+        min-height: 180px; 
     }
+    
 
     .nav-links {
+        display: flex;
         flex-direction: row;
-        /* Keep them in a row but let them wrap */
         flex-wrap: wrap;
         justify-content: center;
-        gap: 15px;
-        /* Use space instead of lines to separate links */
-        font-size: 14px;
+        gap: 12px; /* Slightly tighter gap for small screens */
+        font-size: 13px; /* Slightly smaller font */
         padding: 0;
+        margin: 0;
+        width: 100%; /* Ensures links stay within the nav container */;
     }
 
     .nav-links li {
@@ -1103,13 +1110,24 @@ header {
     }
 
     .header-button {
-        width: fit-content;
-        margin-top: 10px;
+       width: fit-content; 
+        min-width: 120px;
+        padding: 12px 25px;
+        display: block;
+        margin-top: auto;
+        bottom: 0px;
+        margin-right: 40px;
+        margin-left: 40px;
 
     }
 
     .footer-div {
-        flex-direction: column;
+       flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box; flex-direction: column;
         text-align: center;
         gap: 10px;
 
