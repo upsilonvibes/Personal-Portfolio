@@ -15,7 +15,7 @@ function Home() {
                     </p>
                 </div>
                 <div>
-                    <img className="index-hero-image" src="Images/My pic with blurred bg.png"/>
+                    <img className="index-hero-image" src="/images/My pic with blurred bg.png"/>
                 </div>
             </div>
 

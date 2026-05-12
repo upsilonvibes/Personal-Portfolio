@@ -17,7 +17,7 @@ function Projects(){
                         <span className="project-status-badge">Completed</span>
                         <div className="project-corner-preview">
 
-                          <img src="Images/Portifolio Logo.png" alt="Preview" />
+                          <img src="/images/Portifolio Logo.png" alt="Preview" />
                         </div>
                       </div>
 
@@ -52,7 +52,7 @@ function Projects(){
                         <span className="project-status-badge">Completed</span>
                         <div className="project-corner-preview">
 
-                          <img src="Images/Portifolio Logo.png" alt="Preview" />
+                          <img src="/images/Portifolio Logo.png" alt="Preview" />
                         </div>
                       </div>
 
@@ -86,7 +86,7 @@ function Projects(){
                         <span className="project-status-badge">Completed</span>
                         <div className="project-corner-preview">
 
-                          <img src="Images/Portifolio Logo.png" alt="Preview" />
+                          <img src="/images/Portifolio Logo.png" alt="Preview" />
                         </div>
                       </div>
 
@@ -120,7 +120,7 @@ function Projects(){
                         <span className="project-status-badge">Completed</span>
                         <div className="project-corner-preview">
 
-                          <img src="Images/Portifolio Logo.png" alt="Preview" />
+                          <img src="/images/Portifolio Logo.png" alt="Preview" />
                         </div>
                       </div>
 
@@ -154,7 +154,7 @@ function Projects(){
                         <span className="project-status-badge">Completed</span>
                         <div className="project-corner-preview">
 
-                          <img src="Images/Portifolio Logo.png" alt="Preview" />
+                          <img src="/images/Portifolio Logo.png" alt="Preview" />
                         </div>
                       </div>
 
@@ -191,7 +191,7 @@ function Projects(){
                         <span className="project-status-badge">Completed</span>
                         <div className="project-corner-preview">
 
-                          <img src="Images/Portifolio Logo.png" alt="Preview" />
+                          <img src="/images/Portifolio Logo.png" alt="Preview" />
                         </div>
                       </div>
 

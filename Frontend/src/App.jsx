@@ -15,7 +15,7 @@ function App() {
         <nav className="nav">
 
 
-          <img className="logo" src="Images/Portifolio Logo.png" />
+          <img className="logo" src="/images/Portifolio Logo.png" />
 
 
           <ul className="nav-links">

@@ -6,7 +6,7 @@ function About() {
                     <h1 className="about-headline">About Me</h1>
 
                     <div>
-                      <img className="about-hero-image" src="Images/My Display Picture.jpg" alt="About Image" />
+                      <img className="about-hero-image" src="/images/My Display Picture.jpg" alt="About Image" />
                     </div>
                   </div>
                   <div className="about-content">
