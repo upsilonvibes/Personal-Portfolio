@@ -1,10 +1,15 @@
-/* --- Root and Global Styles --- */
+/* ==========================================================================
+   1. ROOT AND GLOBAL VARIABLES
+   ========================================================================== */
 :root {
     --primary-font: "Roboto", sans-serif;
     --main-bg: linear-gradient(135deg, #0f4141 45%, #294d45 55%);
     --text-color: #e0e0e0;
 }
 
+/* ==========================================================================
+   2. BASE STYLES & RESET SYSTEM
+   ========================================================================== */
 * {
     font-family: var(--primary-font);
 }
@@ -39,41 +44,9 @@ body {
     font-variation-settings: width 100px;
 }
 
-/*============ Index Page ===========*/
-
-/*Logo */
-.logo {
-    position: relative;
-    width: 70px;
-    height: 70px;
-    margin-left: 0px;
-    border-radius: 50px;
-}
-
-/*Let's Chat Button*/
-.header-button {
-    font-family: "Roboto", sans-serif;
-    width: 70px;
-    height: 50px;
-    margin-left: 150px;
-    margin-right: 20px;
-    border: none;
-    border-radius: 10px;
-    font-size: 15px;
-    cursor: pointer;
-    transition: 0.2s ease-in-out;
-    font-weight: bold;
-    background-color: #00ff9d;
-    color: #0a1f1a;
-    box-shadow: 0 4px 15px rgba(0, 255, 157, 0.2);
-}
-
-.header-button:hover {
-    background-color: #ffffff;
-    color: #0a1f1a;
-    transform: translateY(-2px);
-}
-
+/* ==========================================================================
+   3. GLOBAL NAVIGATION HEADER COMPONENT
+   ========================================================================== */
 /* Navigation bar */
 nav {
     background-color: #14362d;
@@ -88,12 +61,27 @@ nav {
     margin-top: 5px;
     position: fixed;
     top: 0;
-
 }
 
 .nav:hover {
     color: rgb(145, 1, 1);
     background-color: rgb(2, 124, 67);
+}
+
+header {
+    top: 0;
+    z-index: 1000;
+    background: #014747;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/*Logo */
+.logo {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    margin-left: 0px;
+    border-radius: 50px;
 }
 
 /*Navigation links */
@@ -126,6 +114,7 @@ nav {
 .nav-links a:hover {
     color: #51ff00f6;
 }
+
 .nav-links a.active {
     color: #00ff9d;
     font-weight: bold;
@@ -133,18 +122,46 @@ nav {
     border-bottom: 2px solid #00ff9d;
     padding-bottom: 3px;
 }
+
+/*Let's Chat Button*/
+.header-button {
+    font-family: "Roboto", sans-serif;
+    width: 70px;
+    height: 50px;
+    margin-left: 150px;
+    margin-right: 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    font-weight: bold;
+    background-color: #00ff9d;
+    color: #0a1f1a;
+    box-shadow: 0 4px 15px rgba(0, 255, 157, 0.2);
+}
+
+.header-button:hover {
+    background-color: #ffffff;
+    color: #0a1f1a;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   4. HOME PAGE SECTION
+   ========================================================================== */
 /*Index Body*/
 .index-body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    /* Styles now inherited from body root */
+
 }
 
 .index-container {
     flex: 1;
     display: flex;
-    margin-top:40px;
+    margin-top: 40px;
 }
 
 .index-hero {
@@ -152,6 +169,7 @@ nav {
     flex-direction: column;
     min-height: 100vh;
     /* Ensures this section takes full screen height */
+
     justify-content: center;
     padding: 20px;
 }
@@ -172,14 +190,12 @@ nav {
     margin-top: 20px;
     cursor: cell;
     transition: transform 0.3s ease, filter 0.2s ease, box-shadow 0.s ease;
-
 }
 
 .index-hero-image:hover {
     transition: all 0.3s ease-in-out;
     transform: scale(0.95);
     filter: brightness(0.90);
-
 }
 
 /*Identity*/
@@ -213,7 +229,6 @@ nav {
     color: rgb(255, 255, 255);
     display: inline-block;
     word-spacing: 3px;
-    ;
     margin-top: 20px;
     text-shadow: 0 0 15px rgb(255, 255, 255);
 }
@@ -246,7 +261,13 @@ nav {
     font-family: "Roboto", sans-serif;
     background-color: #b55800ad;
     color: white;
-    display: inline-block;
+
+    text-decoration: none;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
     position: relative;
     overflow: hidden;
 }
@@ -330,89 +351,21 @@ nav {
     opacity: 0.8;
 }
 
-
-/* Footer  */
-.quick-view-bar {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    background-color: #14362d;
-    color: #b0c4b1;
-    padding: 10px 0;
-    font-size: 14px;
-    margin-top: 10px;
-}
-
-footer {
-    background-color: #14362d;
-    text-align: center;
-    color: white;
-    border-radius: 10px;
-    margin-top: auto;
-    width: 100%;
-}
-
-.footer-social-links a i {
-    font-size: 25px;
-    margin-right: 10px;
-    transition: 0.3s ease-in-out;
-}
-
-.footer-social-links a:hover i {
-    filter: brightness(1.5);
-    transform: translateY(-3px);
-    text-shadow: 0 0 15px rgba(21, 255, 0, 0.7);
-}
-
-.footer-social-links i.email {
-    color: #FF4500;
-}
-
-.footer-social-links i.linkedin {
-    color: #0077B5;
-}
-
-.footer-social-links i.telegram {
-    color: #0088cc;
-}
-
-.footer-social-links i.github {
-    color: rgb(22, 20, 20);
-}
-
-.footer-div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 10px 20px;
-}
-
-.footer-div1 {
-    display: flex;
-    align-items: center;
-    font-size: 15px;
-    font-weight: bold;
-    color: #1d1919;
-    gap: 10px;
-}
-
-/*=========== About Page ===========*/
-
+/* ==========================================================================
+   5. ABOUT PAGE SECTION
+   ========================================================================== */
 /*About Body*/
 .about-body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-
 }
 
 .about-container {
     flex: 1;
     display: flex;
     flex-direction: column;
-    margin-bottom:30px;
+    margin-bottom: 30px;
 }
 
 /*About Hero Section*/
@@ -452,7 +405,6 @@ footer {
     color: rgba(255, 102, 0, 0.699);
     display: inline-block;
     margin-top: 20px;
-
 }
 
 .about-content-1,
@@ -570,14 +522,6 @@ footer {
     text-shadow: 0 0 15px rgba(0, 110, 255, 0.7);
 }
 
-header {
-    
-    top: 0;
-    z-index: 1000;
-    background: #014747;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
-
 .about-tech {
     margin-top: 40px;
     padding: 20px 0;
@@ -631,98 +575,120 @@ header {
     cursor: pointer;
 }
 
-/*========== Contact Page ==========*/
-.contact-body {
+/* ==========================================================================
+   6. SERVICES PAGE SECTION
+   ========================================================================== */
+.service-body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-
 }
 
-.contact-container {
+.service-container {
     flex: 1;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 20px;
+    flex-direction: column;
 }
 
-.contact-hero {
-    width: 100%;
-    max-width: 600px;
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(0, 255, 157, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    transition: 0.4s ease;
     text-align: center;
 }
 
-.contact-form-wrapper {
-    background: rgba(255, 255, 255, 0.05);
-    /* Subtle transparent card */
-    padding: 30px;
-    border-radius: 20px;
-    border: 1px solid rgba(0, 255, 157, 0.2);
-    margin-top: 30px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+.service-card:hover {
+    transform: translateY(-10px);
+    border-color: #00ff9d;
+    background: rgba(0, 255, 157, 0.05);
 }
 
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.service-icon i {
+    font-size: 40px;
+    color: #ffcc00;
+    /* Gold icon */
+
+    margin-bottom: 20px;
+}
+
+.service-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
     text-align: left;
 }
 
-.form-group {
+.service-list li {
+    font-size: 14px;
+    color: #b0c4b1;
+    margin-bottom: 8px;
+}
+
+.service-list i {
+    color: #00ff9d;
+    /* Emerald checkmark */
+
+    margin-right: 10px;
+}
+
+/* --- Services CTA Section --- */
+.services-cta {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    align-items: center;
+    text-align: center;
+    margin-top: 80px;
+    padding: 60px 20px;
+    background: linear-gradient(180deg, rgba(10, 31, 26, 0) 0%, rgba(0, 255, 157, 0.05) 100%);
+    border-radius: 30px;
+    border-top: 1px solid rgba(0, 255, 157, 0.1);
 }
 
-.form-group label {
+.services-cta .next-title {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
     color: #ffcc00;
-    /* Matching your hero-role color */
-    font-weight: bold;
-    font-size: 14px;
-    letter-spacing: 1px;
+
 }
 
-.contact-form input,
-.contact-form textarea {
-    background: rgba(10, 31, 26, 0.8);
-    border: 1px solid #1a4a3e;
-    border-radius: 8px;
-    padding: 12px;
-    color: #e0e0e0;
-    font-family: "Roboto", sans-serif;
-    outline: none;
-    transition: 0.3s ease;
+.services-cta .next-p {
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    font-size: 1.1rem;
+    color: #b0c4b1;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: #00ff9d;
-    box-shadow: 0 0 10px rgba(0, 255, 157, 0.2);
+/* Reusing the GitHub button style but making it 'Pop' more here */
+.services-cta .github-main-btn {
+    padding: 18px 40px;
+    font-size: 1.2rem;
+    background-color: #b55800ad;
+    box-shadow: 0 0 20px rgba(181, 88, 0, 0.2);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-align: center;
+    width: fit-content;
 }
 
-/* Submit Button Style */
-.submit-btn {
+.services-cta .github-main-btn:hover {
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 255, 157, 0.3);
     background-color: #00ff9d;
     color: #0a1f1a;
-    border: none;
-    padding: 15px;
-    font-weight: bold;
-    font-size: 16px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-top: 10px;
 }
 
-.submit-btn:hover {
-    background-color: #ffffff;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 255, 157, 0.4);
-}
-
-/*Projects Page*/
+/* ==========================================================================
+   7. PROJECTS PAGE SECTION
+   ========================================================================== */
 .project-body {
     display: flex;
     min-height: 100vh;
@@ -741,7 +707,6 @@ header {
     gap: 25px;
     margin-top: 40px;
     grid-template-columns: 1fr 1fr;
-
 }
 
 /* Project Card Styling */
@@ -756,6 +721,7 @@ header {
     justify-content: space-between;
     position: relative;
     /* Allows the corner preview to be positioned absolutely */
+
     overflow: hidden;
 }
 
@@ -777,25 +743,27 @@ header {
     width: 70%;
     opacity: 0.6;
     /* Keeps it subtle like a watermark */
+
 }
 
 .project-card:hover {
     transform: translateY(-10px);
     border-color: #ffcc00;
     /* Gold highlight on hover */
+
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .project-title {
     color: #00ff9d;
     /* Emerald Green */
+
     font-size: 22px;
     margin-bottom: 10px;
 }
 
 .projects-subtitle {
     color: #ffcc00;
-    /* Matching your 'hero-role' gold */
     font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -844,6 +812,7 @@ header {
     background-color: #005a8a;
     color: #51ff00f6;
     /* Bright green hover effect */
+
     transform: scale(1.1);
     box-shadow: 0 10px 20px rgba(0, 119, 181, 0.3);
 }
@@ -872,12 +841,13 @@ header {
     margin-top: 15px;
 }
 
-/* ======== Blog Page ======== */
+/* ==========================================================================
+   8. BLOG PAGE SECTION
+   ========================================================================== */
 .blog-body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-
 }
 
 .blog-container {
@@ -886,6 +856,7 @@ header {
     flex-direction: column;
     max-width: 800px;
     /* Narrower than projects for better readability */
+
     margin: 0 auto;
     padding: 60px 20px;
 }
@@ -925,9 +896,8 @@ header {
 .blog-card:hover {
     border-left-color: #ffcc00;
     /* Gold highlight on hover */
+
 }
-
-
 
 .blog-date {
     min-width: 100px;
@@ -949,6 +919,7 @@ header {
     font-weight: bold;
     color: #ffcc00;
     /* Gold to make it stand out against the green text */
+
     text-decoration: none;
     display: inline-block;
     margin-top: 15px;
@@ -958,8 +929,10 @@ header {
 .blog-card .next-link:hover {
     color: #00ff9d;
     /* Switch to Emerald on hover */
+
     padding-left: 10px;
     /* Subtle "push" effect when hovering */
+
 }
 
 .blog-content {
@@ -971,6 +944,7 @@ header {
 .blog-content .next-link {
     margin-top: auto;
     /* This pushes the link to the very bottom of the card */
+
     padding-top: 20px;
 }
 
@@ -984,119 +958,172 @@ header {
     font-weight: bold;
     border: 1px solid #00ff9d;
     width: fit-content;
-
-
 }
 
-/* ========= Services Page ==========*/
-.service-body {
+/* ==========================================================================
+   9. CONTACT PAGE SECTION
+   ========================================================================== */
+.contact-body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-
 }
 
-.service-container {
+.contact-container {
     flex: 1;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
 }
 
-.service-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 50px;
-    margin-bottom: 30px;
-}
-
-.service-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(0, 255, 157, 0.1);
-    padding: 40px;
-    border-radius: 20px;
-    transition: 0.4s ease;
+.contact-hero {
+    width: 100%;
+    max-width: 600px;
     text-align: center;
 }
 
-.service-card:hover {
-    transform: translateY(-10px);
-    border-color: #00ff9d;
-    background: rgba(0, 255, 157, 0.05);
+.contact-form-wrapper {
+    background: rgba(255, 255, 255, 0.05);
+    /* Subtle transparent card */
+
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 255, 157, 0.2);
+    margin-top: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-.service-icon i {
-    font-size: 40px;
-    color: #ffcc00;
-    /* Gold icon */
-    margin-bottom: 20px;
-}
-
-.service-list {
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     text-align: left;
 }
 
-.service-list li {
-    font-size: 14px;
-    color: #b0c4b1;
-    margin-bottom: 8px;
-}
-
-.service-list i {
-    color: #00ff9d;
-    /* Emerald checkmark */
-    margin-right: 10px;
-}
-
-/* --- Services CTA Section --- */
-.services-cta {
+.form-group {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-top: 80px;
-    padding: 60px 20px;
-    background: linear-gradient(180deg, rgba(10, 31, 26, 0) 0%, rgba(0, 255, 157, 0.05) 100%);
-    border-radius: 30px;
-    border-top: 1px solid rgba(0, 255, 157, 0.1);
+    gap: 8px;
 }
 
-.services-cta .next-title {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
+.form-group label {
     color: #ffcc00;
-    /* Using your Gold for the final hook */
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
 }
 
-.services-cta .next-p {
-    max-width: 600px;
-    margin: 0 auto 30px auto;
-    font-size: 1.1rem;
-    color: #b0c4b1;
+.contact-form input,
+.contact-form textarea {
+    background: rgba(10, 31, 26, 0.8);
+    border: 1px solid #1a4a3e;
+    border-radius: 8px;
+    padding: 12px;
+    color: #e0e0e0;
+    font-family: "Roboto", sans-serif;
+    outline: none;
+    transition: 0.3s ease;
 }
 
-/* Reusing the GitHub button style but making it 'Pop' more here */
-.services-cta .github-main-btn {
-    padding: 18px 40px;
-    font-size: 1.2rem;
-    background-color: #b55800ad;
-    box-shadow: 0 0 20px rgba(181, 88, 0, 0.2);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    text-align: center;
-    width: fit-content;
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #00ff9d;
+    box-shadow: 0 0 10px rgba(0, 255, 157, 0.2);
 }
 
-.services-cta .github-main-btn:hover {
-    transform: scale(1.1) translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 255, 157, 0.3);
+/* Submit Button Style */
+.submit-btn {
     background-color: #00ff9d;
     color: #0a1f1a;
+    border: none;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
 }
 
-/* --- Global Mobile Queries (Phones) --- */
+.submit-btn:hover {
+    background-color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 255, 157, 0.4);
+}
+
+/* ==========================================================================
+   10. GLOBAL FOOTER COMPONENT
+   ========================================================================== */
+.quick-view-bar {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    background-color: #14362d;
+    color: #b0c4b1;
+    padding: 10px 0;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #14362d;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    margin-top: auto;
+    width: 100%;
+}
+
+.footer-social-links a i {
+    font-size: 25px;
+    margin-right: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.footer-social-links a:hover i {
+    filter: brightness(1.5);
+    transform: translateY(-3px);
+    text-shadow: 0 0 15px rgba(21, 255, 0, 0.7);
+}
+
+.footer-social-links i.email {
+    color: #FF4500;
+}
+
+.footer-social-links i.linkedin {
+    color: #0077B5;
+}
+
+.footer-social-links i.telegram {
+    color: #0088cc;
+}
+
+.footer-social-links i.github {
+    color: rgb(22, 20, 20);
+}
+
+.footer-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.footer-div1 {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: #1d1919;
+    gap: 10px;
+}
+
+/* ==========================================================================
+   11. MEDIA QUERIES & RESPONSIVE DESIGN (MOBILE ADAPTATION)
+   ========================================================================== */
 /* Prevents content from touching the screen edges */
 .hero-container,
 .blog-container,
@@ -1105,10 +1132,9 @@ header {
     padding-right: 20px;
     box-sizing: border-box;
     /* Ensures padding doesn't add to the width */
+
 }
 
-/*===== Index  Page =======*/
-/*Nav & Footer*/
 @media screen and (max-width: 768px) {
     .nav {
         display: flex;
@@ -1122,7 +1148,6 @@ header {
         min-height: 180px;
     }
 
-
     .nav-links {
         display: flex;
         flex-direction: row;
@@ -1130,34 +1155,37 @@ header {
         justify-content: center;
         gap: 12px;
         /* Slightly tighter gap for small screens */
+
         font-size: 13px;
         /* Slightly smaller font */
+
         padding: 0;
         margin: 0;
         width: 100%;
         /* Ensures links stay within the nav container */
-        ;
+
     }
 
     .nav-links li {
         border: none;
-        /* Safety check */
         list-style: none;
     }
 
     .nav-links li::after {
         content: none !important;
-        /* Deletes the generated content */
+
     }
-#index,
-#home,
-#about,
-#projects,
-#services,
-#blog,
-#contact {
-    scroll-margin-top: 215px;
-}
+
+    #index,
+    #home,
+    #about,
+    #projects,
+    #services,
+    #blog,
+    #contact {
+        scroll-margin-top: 215px;
+    }
+
     .header-button {
         width: fit-content;
         min-width: 120px;
@@ -1167,7 +1195,6 @@ header {
         bottom: 0px;
         margin-right: 40px;
         margin-left: 40px;
-
     }
 
     .footer-div {
@@ -1177,20 +1204,13 @@ header {
         padding: 20px;
         width: 100%;
         box-sizing: border-box;
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-        
-
     }
-
 
     /* Hero image */
     .index-container {
         flex-direction: column-reverse;
         text-align: center;
-        margin-top:220px;
-
+        margin-top: 220px;
     }
 
     .index-hero-image {
@@ -1213,35 +1233,35 @@ header {
         border: none;
         justify-content: center;
         gap: 30px;
-
     }
 
     .home-buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    flex-wrap: nowrap;
-    padding-left: 0;
-    margin-top:30px;
-}
-.social-links{
-    align-self:center;
-}
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: nowrap;
+        padding-left: 0;
+        margin-top: 30px;
+    }
+
+    .social-links {
+        align-self: center;
+    }
+
     /*======== About Page =======*/
     /*Hero Image*/
     .about-hero-image {
-
         position: relative;
         display: block;
         width: 180px;
         height: 180px;
         background: rgba(0, 0, 0, 0.3);
         /* Adds a subtle overlay for better text contrast */
+
         border-radius: 50%;
         margin: 0 auto 20px auto;
-
     }
 
     /*Headline*/
@@ -1259,6 +1279,7 @@ header {
         flex-direction: column;
         padding: 20px;
         /* Small cushion so text doesn't touch screen edges */
+
         width: 100%;
         box-sizing: border-box;
     }
@@ -1273,7 +1294,6 @@ header {
         font-size: 1.8rem;
         text-align: left;
         margin: 0;
-
     }
 
     .about-content {
@@ -1281,16 +1301,11 @@ header {
         flex-direction: column;
         width: 100%;
         text-align: justify;
-        width: 100%;
         padding: 0;
         margin-bottom: 10px;
-
-
-
     }
 
     /*====== Blog Page =======*/
-
     .blog-card {
         flex-direction: column;
         gap: 15px;
@@ -1315,13 +1330,9 @@ header {
         width: fit-content;
         margin: 20px auto;
         overflow-wrap: normal;
-
     }
 
-
-
     /*======= Projects page ========*/
-
     .project-grid {
         display: flex;
         flex-direction: column;
@@ -1329,9 +1340,7 @@ header {
         gap: 20px;
     }
 
-
     /*======= Services Page==========*/
-
     .services-grid {
         grid-template-columns: 1fr;
     }
@@ -1343,6 +1352,7 @@ header {
     .next-title {
         font-size: 2rem;
         /* Shrinks the main titles */
+
     }
 
     .next-p {
