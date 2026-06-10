@@ -4,13 +4,13 @@ Welcome to my personal portfolio! This project has been refactored into a React 
 
 ## 🚀 Features
 * **React Architecture:** Migrated from static HTML to a modular component-based structure for better maintainability and decoupled scrolling layout logic.
+* **Dynamic Typewriter Headline:** Utilizes an optimized typing engine on the landing hero section to cycle through core technical identities with custom terminal animations.
 * **Direct WhatsApp Integration:** A "Let's Chat" feature connected directly to my professional WhatsApp for instant collaboration.
 * **Technical Journal:** A dual-language blog documenting my #CodeLogs and #SpanishJourney toward DELE/SIELE certification.
 * **Case Study Gallery:** A curated grid of projects featuring detailed "Challenge" and "Solution" statements.
-* **Adaptive Mobile Design:** Fully responsive layouts using CSS Grid and Flexbox with a mobile-first approach.
 
 ## 🛠️ Tech Stack
-* **Frontend:** React.js, HTML5, CSS3 (Grid & Flexbox), JavaScript (ES6+).
+* **Frontend:** React.js, `react-type-animation`, HTML5, CSS3 (Grid & Flexbox), JavaScript (ES6+).
 * **Backend/Hosting:** Node.js & Vercel.
 * **Tools:** VS Code, Windows System CMD (Git version control).
 

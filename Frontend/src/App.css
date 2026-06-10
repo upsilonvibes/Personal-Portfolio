@@ -223,7 +223,22 @@ header {
     margin-top: 20px;
     filter: brightness(1.5);
 }
+/* --- Typewriter Effect Styling --- */
+.hero-role-typing {
+  font-weight: 600;
+  color: var(--accent); /* Uses your beautiful purple theme token color */
+}
 
+/* Customizing the library's built-in blinking terminal cursor box */
+.hero-role-typing::after {
+  content: '|';
+  animation: cursor-blink 1s infinite step-start;
+  margin-left: 4px;
+}
+
+@keyframes cursor-blink {
+  50% { opacity: 0; }
+}
 .hero-aim {
     font-size: 18px;
     color: rgb(255, 255, 255);
