@@ -4,7 +4,7 @@ import { TypeAnimation } from 'react-type-animation';
 function Home() {
   return (
     <div id="home" className="index-container">
-      
+
       <section className="index-hero">
         <div className="index-content">
           <div>
@@ -13,7 +13,7 @@ function Home() {
             </h1>
             <h2 className="name">
               I am <span className="hero-name">Percy Njuguna</span><br />
-              
+
               {/* Typewriter Dynamic Container */}
               <span className="hero-role-wrapper">
                 And I am a {' '}
@@ -36,17 +36,17 @@ function Home() {
               </span>
             </h2>
             <p className="hero-aim">
-              My aim is to engineer <span className="hero-highlight"> scalable, high-performance solutions </span> 
-              that solve real-world problems, bridging the gap between maintainable code and 
-              <span className="hero-highlight"> exceptional user experience </span> through 
+              My aim is to engineer <span className="hero-highlight"> scalable, high-performance solutions </span>
+              that solve real-world problems, bridging the gap between maintainable code and
+              <span className="hero-highlight"> exceptional user experience </span> through
               <span className="hero-highlight">modern web standards</span>.
             </p>
           </div>
           <div>
-            <img 
-              className="index-hero-image" 
-              src="/images/hero_index.jpg" 
-              alt="Percy Njuguna - Creative Developer Portfolio Hero" 
+            <img
+              className="index-hero-image"
+              src="/images/hero_index.jpg"
+              alt="Percy Njuguna - Creative Developer Portfolio Hero"
             />
           </div>
         </div>
@@ -56,7 +56,10 @@ function Home() {
             <a href="#contact" className="hire">
               <b>Hire Me</b>
             </a>
-            <button className="cv">Download CV</button>
+
+            <a href="/Percy_Njuguna_CV" download="Percy_Njuguna_CV">
+              <button className="cv">Download CV</button>
+            </a>
           </div>
 
           <div className="social-links">

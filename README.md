@@ -8,6 +8,7 @@ Welcome to my personal portfolio! This project has been refactored into a React 
 * **Direct WhatsApp Integration:** A "Let's Chat" feature connected directly to my professional WhatsApp for instant collaboration.
 * **Technical Journal:** A dual-language blog documenting my #CodeLogs and #SpanishJourney toward DELE/SIELE certification.
 * **Case Study Gallery:** A curated grid of projects featuring detailed "Challenge" and "Solution" statements.
+* **Integrated Professional Technical CV:** Connected a streamlined, print-ready PDF resume directly via Vite's public asset pipeline for seamless background download delivery.
 
 ## 🛠️ Tech Stack
 * **Frontend:** React.js, `react-type-animation`, HTML5, CSS3 (Grid & Flexbox), JavaScript (ES6+).
