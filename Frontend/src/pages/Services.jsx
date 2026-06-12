@@ -4,6 +4,7 @@ function Services() {
   return (
     <div id="services" className="service-container">
       
+      {/* 1. Core Header Block: Context Branding & Section Target */}
       <section className="service-hero">
         <h1 className="next-title">Technical Services</h1>
         <p className="next-p">
@@ -11,8 +12,10 @@ function Services() {
         </p>
       </section>
 
+      {/* 2. Operational Matrix Grid: Managed completely by flexible external stylesheets */}
       <div className="service-grid">
-        {/* Card 1: Frontend Development */}
+        
+        {/* Card 1: Frontend Development Engineering Segment */}
         <div className="service-card">
           <div className="service-icon"><i className="fa-solid fa-code"></i></div>
           <h3 className="service-title">Frontend Development</h3>
@@ -26,7 +29,7 @@ function Services() {
           </ul>
         </div>
 
-        {/* Card 2: Technical Writing */}
+        {/* Card 2: Technical Writing & Documentation Segment */}
         <div className="service-card">
           <div className="service-icon"><i className="fa-solid fa-pen-nib"></i></div>
           <h3 className="service-title">Technical Writing</h3>
@@ -40,7 +43,7 @@ function Services() {
           </ul>
         </div>
 
-        {/* Card 3: Linguistic Assistance */}
+        {/* Card 3: Linguistic Assistance & Intercultural Communication Segment */}
         <div className="service-card">
           <div className="service-icon"><i className="fa-solid fa-language"></i></div>
           <h3 className="service-title">Linguistic Assistance</h3>
@@ -55,7 +58,7 @@ function Services() {
         </div>
       </div>
 
-      {/* Services CTA Section */}
+      {/* 3. Action Optimization Panel (CTA Footer Engagement Frame) */}
       <section className="services-cta">
         <h2 className="next-title">Have a project in mind?</h2>
         <p className="next-p">Whether it's a website build or a technical collaboration, I'm ready to help.</p>
