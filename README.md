@@ -1,6 +1,6 @@
 # My Professional Portfolio
 
-Welcome to my personal portfolio! This project has been refactored into a React SPA (Single Page Application) to showcase my transition from static web development to full-stack engineering. It highlights my technical skills, my journey toward Spanish B2 proficiency, and my work as a upcoming developer in Nairobi.
+Welcome to my personal portfolio! This project has been refactored into a React SPA (Single Page Application) to showcase my transition from static web development to full-stack engineering. It highlights my technical skills, my journey toward Spanish B2 proficiency, and my work as an upcoming developer in Nairobi.
 
 ## 🚀 Features
 * **React Architecture:** Migrated from static HTML to a modular component-based structure for better maintainability and decoupled scrolling layout logic.
@@ -8,6 +8,12 @@ Welcome to my personal portfolio! This project has been refactored into a React 
 * **Direct WhatsApp Integration:** A "Let's Chat" feature connected directly to my professional WhatsApp for instant collaboration.
 * **Technical Journal:** A dual-language blog documenting my #CodeLogs and #SpanishJourney toward DELE/SIELE certification.
 * **Case Study Gallery:** A curated grid of projects featuring detailed "Challenge" and "Solution" statements.
+* ### 🖼️ Dynamic Image Framing & Resilient Fallback Architecture
+  The project features an automated, runtime-adaptive media loading system built specifically to elegantly handle diverse asset types and network edge cases:
+  * **Adaptive Layout Switching**: Seamlessly toggles layout modes dynamically between `transparent-bg` (for high-fidelity project branding icon matrices like `.ico`, `.svg`, and transparent `.png` files) and `bleed-bg` (for immersive full-width backdrop illustrations).
+  * **Multi-Layer Failsafe Pipeline**: Implements runtime HTML image error-catching hooks (`onError`). If a custom project-specific route is broken or missing, the interface instantaneously recalibrates to load a global high-tech system backdrop preview without breaking presentation layout bounds.
+  * **Ultimate Terminal Mode Backup**: In the extreme event that even the secondary fallback background graphic fails to load from the public server directory, the DOM instantly injects an isolated fallback container displaying a clean console terminal icon as a stylistic fallback.
+  * **Centralized CSS Maintenance**: Built entirely without brittle, inline style definitions to strictly preserve clean separation of concerns and maintain scalable responsive interface boundaries.
 * **Integrated Professional Technical CV:** Connected a streamlined, print-ready PDF resume directly via Vite's public asset pipeline for seamless background download delivery.
 
 ## 🛠️ Tech Stack
