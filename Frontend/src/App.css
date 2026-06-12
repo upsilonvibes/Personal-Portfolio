@@ -1084,8 +1084,6 @@ header {
     display: flex;
     flex-direction: column;
     max-width: 800px;
-    /* Narrower than projects for better readability */
-
     margin: 0 auto;
     padding: 60px 20px;
 }
@@ -1106,7 +1104,12 @@ header {
     cursor: pointer;
     transition: 0.3s;
 }
-
+/* Highlights the active filter selection button frame */
+.filter-btn.active {
+    background: rgb(255, 51, 0);
+    color: #ffffff;
+    border-color: rgb(255, 51, 0);
+}
 .filter-btn.active,
 .filter-btn:hover {
     background: #00ff9d;
@@ -1165,16 +1168,15 @@ header {
 }
 
 .blog-content {
-    display: flex;
+   display: flex;
     flex-direction: column;
-    height: 100%;
+    align-items: flex-start;
+    width: 100%;
 }
 
 .blog-content .next-link {
     margin-top: auto;
-    /* This pushes the link to the very bottom of the card */
-
-    padding-top: 20px;
+   padding-top: 20px;
 }
 
 /* Status Badge Variations */
@@ -1188,7 +1190,29 @@ header {
     border: 1px solid #00ff9d;
     width: fit-content;
 }
+.back-btn {
+    margin-bottom: 20px;
+}
 
+.full-post-heading {
+    margin-top: 15px;
+}
+
+.full-post-content {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+/* Resets the Read More button to act like a semantic link safely without inline declarations */
+.blog-read-more-trigger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-family: inherit;
+    display: inline-block;
+}
 /* ==========================================================================
    9. CONTACT PAGE SECTION
    ========================================================================== */
@@ -1670,32 +1694,58 @@ footer {
     /* ==========================================
        BLOG PAGE 
        ========================================== */
+    /* Prevents button lists from compressing out of viewport margins */
+    .blog-filter {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap; /* Allows filter buttons to stack naturally on tiny screens */
+        gap: 10px;
+        width: 100%;
+        margin: 20px auto;
+    }
+    .filter-btn {
+        font-size: 0.85rem;
+        padding: 8px 16px;
+        flex: 1; /* Distributes widths evenly inside narrow device boundaries */
+        min-width: 100px;
+        text-align: center;
+    }
+
+    /* Stacks chronological date info straight over content boxes cleanly */
     .blog-card {
         flex-direction: column;
         gap: 15px;
+        padding: 20px 15px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .blog-date {
+        text-align: left; /* Aligns left for a clean, editorial timeline signature look */
+        width: 100%;
+        font-size: 0.9rem;
+        border-bottom: 1px solid rgba(255, 51, 0, 0.1);
+        padding-bottom: 5px;
     }
 
-    .blog-date {
-        text-align: center;
+    .blog-content {
+        align-items: flex-start;
         width: 100%;
     }
 
     .blog-post-title {
-        text-align: center;
+        font-size: 1.3rem;
+        text-align: left;
+        line-height: 1.4;
+        margin-top: 10px;
     }
 
     .blog-content .next-link {
-        text-align: center;
-        width: 100%;
+        display: inline-block;
+        text-align: left;
+        width: auto;
+        margin-top: 10px;
     }
-
-    .blog-filter {
-        justify-content: center;
-        width: fit-content;
-        margin: 20px auto;
-        overflow-wrap: normal;
-    }
-
     /* ==========================================
        SERVICES PAGE 
        ========================================== */
