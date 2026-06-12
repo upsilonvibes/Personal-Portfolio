@@ -34,8 +34,8 @@ function Projects() {
       status: "Completed",
       envType: "cloud",
       imageConfig: {
-        src: "/favicon.svg", 
-        isTransparent: true
+        src: null, 
+        isTransparent: false
       },
       techIcons: [
         <i className="fa-brands fa-react" title="React.js" key="r"></i>,
@@ -258,7 +258,7 @@ function Projects() {
       <div className="github-cta-container">
         <p className="next-p">In quest for more surprises? Explore the full raw ecosystem index on GitHub.</p>
         <a href="https://github.com/upsilonvibes" target="_blank" rel="noopener noreferrer" className="github-main-btn">
-          <i className="fa-brands fa-github"></i> EXPLORE ALL REPOSITORIES
+          <i className="fa-brands fa-github"></i> EXPLORE ALL PROJECTS
         </a>
       </div>
     </div>
